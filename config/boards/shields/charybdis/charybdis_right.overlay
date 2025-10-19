@@ -4,8 +4,9 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "charybdis.dtsi"
+#include <dt-bindings/zmk/hid.h>
 #include <input/processors.dtsi>
+#include "charybdis.dtsi"
 
 &default_transform {
     col-offset = <6>;
@@ -66,7 +67,7 @@
         device = <&trackball>;
         input-processors = <&zip_xy_scaler 3 2>;
         scroller {
-            layers = <3>; // Changed to layer 3
+            layers = <3>;
             sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
     };

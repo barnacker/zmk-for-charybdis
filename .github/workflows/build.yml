@@ -4,27 +4,3 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    with:
-      config_path: config
-
-  verify-and-upload:
-    needs: build
-    runs-on: ubuntu-latest
-    container: zmkfirmware/zmk-build-arm:stable
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-      - name: Initialize West Workspace
-        run: west init -l config
-      - name: Update West Modules
-        run: west update
-      - name: Verify hid.h
-        run: |
-          ls zmk/app/dts/bindings/zmk/hid.h || echo "hid.h not found"
-      - name: Upload Build Logs
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: build-logs
-          path: |
-            build/*/build.log

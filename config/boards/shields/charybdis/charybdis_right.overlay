@@ -5,7 +5,7 @@
  */
 
 #include <input/processors.dtsi>
-#include <dt-bindings/zmk/hid.h>
+#include "../../zmk/app/dts/bindings/zmk/hid.h" // Relative path
 #include "charybdis.dtsi"
 
 &default_transform {

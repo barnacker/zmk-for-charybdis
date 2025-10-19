@@ -71,10 +71,13 @@
             input-processors = <&zip_xy_to_scroll_mapper>;
         };
         
-        // Add this section for volume control on layer 4
+        // Volume control on layer 4 - uses scroll mapper with different scaling
         volume_control {
             layers = <4>;
-            input-processors = <&zip_xy_to_scroll_mapper>;
+            input-processors = <
+                &zip_xy_scaler 1 8  // Reduce sensitivity for finer volume control
+                &zip_xy_to_scroll_mapper
+            >;
         };
     };
 };

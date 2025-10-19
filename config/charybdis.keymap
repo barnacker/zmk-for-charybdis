@@ -71,6 +71,7 @@
                                           &mo 2        &kp R         &bspc_del DEL BSPC    &mo 1      &kp SPACE
                                                        &mkp MB1      &mkp MB2              &kp ENTER
             >;
+            sensor-bindings = <&inc_dec_kp C_AC_PAN_RIGHT C_AC_PAN_LEFT>;  // Normal trackball behavior
         };
 
         sym {

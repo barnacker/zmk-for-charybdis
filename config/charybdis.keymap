@@ -66,11 +66,13 @@
             bindings = <
 &kp F1            &kp F2      &kp F3      &kp F4       &kp F5        &kp F6                &kp F7     &kp F8       &kp F9       &kp F10     &kp F11     &kp F12
 &kp INS           &kp F       &kp B       &kp K        &kp L         &kp J                 &kp EQUAL  &kp W        &kp SQT      &kp SLASH   &kp DOT     &kp PG_UP
-&kp K_PLAY_PAUSE  &hm LGUI S  &hm LALT N  &hm LCTRL T  &hm LSHIFT H  &kp V                 &kp G      &hm RSHFT C  &hm RCTRL A  &hm RALT E  &hm RGUI I  &kp SQT
+&kp K_PLAY_PAUSE  &hm LGUI S  &hm LALT N  &hm LCTRL T  &hm LSHIFT H  &kp V                 &kp G      &hm RSHFT C  &hm RCTRL A  &hm RALT E  &hm RGUI I  &mo 3
 &kp PRINTSCREEN   &kp X       &kp P       &kp D        &kp M         &lingerq Q 0          &kp Z      &kp Y        &kp O        &kp U       &kp COMMA   &kp PG_DN
                                           &mo 2        &kp R         &bspc_del DEL BSPC    &mo 1      &kp SPACE
                                                        &mkp MB1      &mkp MB2              &kp ENTER
             >;
+
+            sensor-bindings = <&inc_dec_kp C_AC_PAN_RIGHT C_AC_PAN_LEFT>;
         };
 
         sym {
@@ -104,7 +106,8 @@
                         &trans  &trans  &trans    &trans  &trans
                                 &trans  &trans    &trans
             >;
-sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         /* layer_2 {

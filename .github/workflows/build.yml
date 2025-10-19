@@ -3,3 +3,16 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      config_path: config
+    steps:
+      - name: Verify hid.h
+        run: |
+          ls zmk/app/dts/bindings/zmk/hid.h || echo "hid.h not found"
+      - name: Upload Build Logs
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-logs
+          path: |
+            build/*/build.log

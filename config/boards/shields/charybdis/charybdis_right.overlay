@@ -65,8 +65,15 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
         input-processors = <&zip_xy_scaler 3 2>;
+        
         scroller {
             layers = <3>;
+            input-processors = <&zip_xy_to_scroll_mapper>;
+        };
+        
+        // Add this section for volume control on layer 4
+        volume_control {
+            layers = <4>;
             input-processors = <&zip_xy_to_scroll_mapper>;
         };
     };

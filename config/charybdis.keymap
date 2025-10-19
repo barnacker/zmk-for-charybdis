@@ -59,6 +59,20 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <25 28>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <25 26>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -106,7 +120,7 @@
             >;
         };
 
-media {
+        media {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -115,6 +129,7 @@ media {
                         &trans  &trans  &trans    &trans  &trans
                                 &trans  &trans    &trans
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 

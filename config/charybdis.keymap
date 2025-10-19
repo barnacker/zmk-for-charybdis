@@ -11,70 +11,60 @@
             label = "QU";
         };
     };
-
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HM";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <280>;
             quick-tap-ms = <250>;
             require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
         };
-
         tmo: thumb_momentary {
             compatible = "zmk,behavior-hold-tap";
             label = "TMO";
             bindings = <&mo>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
         };
-
         bspc_del: backspace_delete {
             compatible = "zmk,behavior-hold-tap";
             label = "BSPC_DEL";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             flavor = "tap-preferred";
         };
-
         lingerq: linger_q {
             compatible = "zmk,behavior-hold-tap";
             label = "LINGERQ";
             bindings = <&kp>, <&qu>;
-
             #binding-cells = <2>;
             tapping-term-ms = <100>;
             flavor = "tap-preferred";
         };
     };
-
     keymap {
         compatible = "zmk,keymap";
-
         baz {
-            bindings = <
+            bindings = 
 &kp F1            &kp F2      &kp F3      &kp F4       &kp F5        &kp F6                &kp F7     &kp F8       &kp F9       &kp F10     &kp F11     &kp F12
-&kp INS           &kp F       &kp B       &kp K        &kp L         &kp J                 &kp EQUAL  &kp W        &kp SQT      &kp SLASH   &kp DOT     &kp PG_UP
+&kp INS           &kp F       &kp B       &kp K        &kp L         &kp J                 &kp EQUAL  &kp W        &mo 3        &kp SLASH   &kp DOT     &kp PG_UP
 &kp K_PLAY_PAUSE  &hm LGUI S  &hm LALT N  &hm LCTRL T  &hm LSHIFT H  &kp V                 &kp G      &hm RSHFT C  &hm RCTRL A  &hm RALT E  &hm RGUI I  &kp SQT
 &kp PRINTSCREEN   &kp X       &kp P       &kp D        &kp M         &lingerq Q 0          &kp Z      &kp Y        &kp O        &kp U       &kp COMMA   &kp PG_DN
                                           &mo 2        &kp R         &bspc_del DEL BSPC    &mo 1      &kp SPACE
                                                        &mkp MB1      &mkp MB2              &kp ENTER
             >;
+            sensor-bindings = <&inc_dec_kp C_AC_PAN_RIGHT C_AC_PAN_LEFT>;
         };
-
         sym {
-            bindings = <
+            bindings = 
 &trans  &trans    &trans    &trans    &trans    &trans       &trans     &trans     &trans             &trans     &trans     &trans
 &trans  &trans    &trans    &trans    &trans    &trans       &kp TILDE  &kp GRAVE  &kp DOUBLE_QUOTES  &kp BSLH   &kp COLON  &trans
 &trans  &kp LBRC  &kp LPAR  &kp RPAR  &kp RBRC  &kp UNDER    &kp PIPE   &kp QMARK  &kp EXCL           &kp EQUAL  &kp AMPS   &trans
@@ -83,9 +73,8 @@
                                       &trans    &trans       &trans
             >;
         };
-
         num {
-            bindings = <
+            bindings = 
 &trans  &trans  &trans    &trans    &trans     &trans     &trans     &trans  &trans  &trans  &trans     &trans
 &trans  &trans  &kp HOME  &kp UP    &kp END    &trans     &kp STAR   &kp N7  &kp N8  &kp N9  &kp PLUS   &trans
 &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans     &kp SLASH  &kp N4  &kp N5  &kp N6  &kp MINUS  &trans
@@ -94,58 +83,16 @@
                                     &trans     &trans     &trans
             >;
         };
-
-        /* layer_2 {
-            bindings = <
-&none  &none   &none    &none   &none         &none         &kp N1         &none         &none     &none  &none   &to 0
-&none  &none   &none    &none   &none         &none         &none         &none          &rgb_ug RGB_BRD &rgb_ug RGB_BRI  &rgb_ug RGB_EFF   &rgb_ug RGB_TOG
-&none  &none   &none    &none   &none         &none         &none         &mkp LCLK     &mkp RCLK  &none  &none   &none
-&none  &none   &none    &none   &bt BT_NXT  &bt BT_CLR    &none         &none         &none     &none  &none   &none
-                                   &none         &none         &none         &none         &none
-                                                 &none         &none         &none
+        scroll {
+            bindings = 
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
+                                &trans  &trans    &trans
             >;
-       
-            
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
-
-       Mouse {
-            bindings = <
-&none        &none         &none         &none         &none      &none         &none       &none      &none         &none         &none         &none
-&none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 3  &none      &bt BT_CLR    &bt BT_CLR  &none      &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none
-&none        &trans        &trans        &mkp MCLK     &trans     &none         &none       &trans     &mkp MCLK     &trans        &trans        &none
-&bootloader  &trans        &mkp RCLK     &mo 4         &mkp LCLK  &mo 5         &mo 5       &mkp LCLK  &mo 4         &mkp RCLK     &trans        &bootloader
-                                         &mo 5         &mkp LCLK  &mkp RCLK     &mkp RCLK   &mkp LCLK
-                                                       &none      &trans        &trans
-            >;
-
-            
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans     &mkp MCLK  &trans     &trans       &trans     &trans     &mkp MCLK  &trans     &trans  &trans
-&trans  &trans  &mkp RCLK  &trans     &mkp LCLK  &trans       &trans     &mkp LCLK  &trans     &mkp RCLK  &trans  &trans
-                           &trans     &mkp LCLK  &mkp RCLK    &mkp RCLK  &mkp LCLK
-                                      &trans     &trans       &trans
-            >;
-                
-                
-               
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans     &mkp MCLK  &trans     &trans       &trans     &trans     &mkp MCLK  &trans     &trans  &trans
-&trans  &trans  &mkp RCLK  &trans     &mkp LCLK  &trans       &trans     &mkp LCLK  &trans     &mkp RCLK  &trans  &trans
-                           &trans     &mkp LCLK  &mkp RCLK    &mkp RCLK  &mkp LCLK
-                                      &trans     &trans       &trans
-            >;
-                
-                
-        };*/
     };
 };

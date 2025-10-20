@@ -129,8 +129,8 @@
 &kp INS                  &kp F       &kp B       &kp K        &kp L         &kp J                 &kp EQUAL  &kp W        &kp SQT      &kp SLASH   &kp DOT     &kp PG_UP
 &playvol 0 C_PLAY_PAUSE  &hm LGUI S  &hm LALT N  &hm LCTRL T  &hm LSHIFT H  &kp V                 &kp G      &hm RSHFT C  &hm RCTRL A  &hm RALT E  &hm RGUI I  &mo 3
 &kp PRINTSCREEN          &kp X       &kp P       &kp D        &kp M         &lingerq Q 0          &kp Z      &kp Y        &kp O        &kp U       &kp COMMA   &kp PG_DN
-                                                 &mkp LCLK    &kp R         &bspc_del DEL BSPC    &kp ENTER  &kp SPACE
-                                                              &mkp RCLK     &mo 2                 &mo 1
+                                                 &mkp LCLK    &kp R         &mo 2                 &mo 1      &kp SPACE
+                                                              &mkp RCLK     &bspc_del DEL BSPC    kp ENTER
             >;
         };
 

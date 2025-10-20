@@ -55,7 +55,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        scroll-layers = <3>;  // ONLY layer 3 for scrolling
+        scroll-layers = <3 4>;  // Add layer 4 here for volume control
     };
 };
 
@@ -68,6 +68,14 @@
         scroller {
             layers = <3>;
             input-processors = <&zip_xy_to_scroll_mapper>;
+        };
+        // Volume control on layer 4
+        volume_control {
+            layers = <4>;
+            input-processors = <
+                &zip_xy_scaler 1 8  // Adjust sensitivity (higher = less sensitive)
+                &zip_xy_to_scroll_mapper
+            >;
         };
     };
 };

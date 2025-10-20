@@ -10,6 +10,21 @@
             bindings = <&kp Q &kp U>;
             label = "QU";
         };
+        // Macro to activate layer and hold Ctrl+Alt
+        layer_ctrlalt: layer_with_ctrlalt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &mo 4>           // Activate layer 4
+                , <&macro_press &kp LCTRL>       // Hold Ctrl
+                , <&macro_press &kp LALT>        // Hold Alt
+                , <&macro_pause_for_release>
+                , <&macro_release &kp LALT>      // Release Alt
+                , <&macro_release &kp LCTRL>     // Release Ctrl
+                , <&macro_release &mo 4>         // Release layer 4
+                ;
+            label = "LAYER_CTRLALT";
+        };
     };
 
     behaviors {
@@ -75,6 +90,13 @@
         caps {
             bindings = <&caps_word>;
             key-positions = <28 31>;
+        };
+        // Example: Press F and B keys together to activate
+        combo_layer_ctrl_alt {
+            timeout-ms = <50>;
+            key-positions = <13 14>;  // Adjust these to your key positions
+            bindings = <&layer_ctrlalt>;
+            layers = <0>;  // Only active on base layer
         };
     };
 

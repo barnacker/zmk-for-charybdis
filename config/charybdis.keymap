@@ -10,19 +10,27 @@
             bindings = <&kp Q &kp U>;
             label = "QU";
         };
+
         // Macro to activate layer and hold Ctrl+Alt
+
         layer_ctrlalt: layer_with_ctrlalt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &mo 4>           // Activate layer 4
-                , <&macro_press &kp LCTRL>       // Hold Ctrl
-                , <&macro_press &kp LALT>        // Hold Alt
-                , <&macro_pause_for_release>
-                , <&macro_release &kp LALT>      // Release Alt
-                , <&macro_release &kp LCTRL>     // Release Ctrl
-                , <&macro_release &mo 4>         // Release layer 4
-                ;
+            bindings =
+                <&macro_press>,
+                <&mo 4>,
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LALT>,
+                <&macro_release>,
+                <&kp LCTRL>,
+                <&macro_release>,
+                <&mo 4>;
+
             label = "LAYER_CTRLALT";
         };
     };
@@ -72,6 +80,16 @@
             tapping-term-ms = <100>;
             flavor = "tap-preferred";
         };
+
+        playvol: playvol {
+            compatible = "zmk,behavior-hold-tap";
+            label = "PLAYVOL";
+            bindings = <&layer_ctrlalt>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+        };
     };
 
     combos {
@@ -91,7 +109,9 @@
             bindings = <&caps_word>;
             key-positions = <28 31>;
         };
+
         // Example: Press F and B keys together to activate
+
         combo_layer_ctrl_alt {
             timeout-ms = <50>;
             key-positions = <13 14>;  // Adjust these to your key positions
@@ -105,12 +125,12 @@
 
         baz {
             bindings = <
-&kp F1                     &kp F2      &kp F3      &kp F4       &kp F5        &kp F6                &kp F7     &kp F8       &kp F9       &kp F10     &kp F11     &kp F12
-&kp INS                    &kp F       &kp B       &kp K        &kp L         &kp J                 &kp EQUAL  &kp W        &kp SQT      &kp SLASH   &kp DOT     &kp PG_UP
-&mt LC(LALT) C_PLAY_PAUSE  &hm LGUI S  &hm LALT N  &hm LCTRL T  &hm LSHIFT H  &kp V                 &kp G      &hm RSHFT C  &hm RCTRL A  &hm RALT E  &hm RGUI I  &mo 3
-&kp PRINTSCREEN            &kp X       &kp P       &kp D        &kp M         &lingerq Q 0          &kp Z      &kp Y        &kp O        &kp U       &kp COMMA   &kp PG_DN
-                                                   &mkp LCLK    &kp R         &mo 2                 &mo 1      &kp SPACE
-                                                                &mkp RCLK     &bspc_del DEL BSPC    &kp ENTER
+&kp F1                   &kp F2      &kp F3      &kp F4       &kp F5        &kp F6                &kp F7     &kp F8       &kp F9       &kp F10     &kp F11     &kp F12
+&kp INS                  &kp F       &kp B       &kp K        &kp L         &kp J                 &kp EQUAL  &kp W        &kp SQT      &kp SLASH   &kp DOT     &kp PG_UP
+&playvol 0 C_PLAY_PAUSE  &hm LGUI S  &hm LALT N  &hm LCTRL T  &hm LSHIFT H  &kp V                 &kp G      &hm RSHFT C  &hm RCTRL A  &hm RALT E  &hm RGUI I  &mo 3
+&kp PRINTSCREEN          &kp X       &kp P       &kp D        &kp M         &lingerq Q 0          &kp Z      &kp Y        &kp O        &kp U       &kp COMMA   &kp PG_DN
+                                                 &mkp LCLK    &kp R         &mo 2                 &mo 1      &kp SPACE
+                                                              &mkp RCLK     &bspc_del DEL BSPC    &kp ENTER
             >;
         };
 

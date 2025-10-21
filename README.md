@@ -37,6 +37,4 @@ SynthX was designed with the following principles:
 5. **Split Ergonomics**: Designed for split keyboards with home row mods
 
 ## Comparisons
-
-<img width="1176" height="666" alt="image" src="https://github.com/user-attachments/assets/5d2ceb49-721e-4c80-ab7b-ab731e92652a" />
-
+<img width="1182" height="655" alt="image" src="https://github.com/user-attachments/assets/ba2f5c21-677c-4bc6-afc9-a5ffdfb4cd3d" />

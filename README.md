@@ -12,7 +12,7 @@ F B K L J     = W ' / .
 S N T H V     G C A E I
 X P D M Q     Z Y O U ,
 ```
-
+## Heat Map
 <img width="1288" height="600" alt="image" src="https://github.com/user-attachments/assets/8fb45a9d-1e26-4636-ad5b-2e33318c1bf4" />
 
 ### Key Features

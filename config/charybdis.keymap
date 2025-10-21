@@ -34,6 +34,20 @@
 
             label = "LAYER_CTRLALT";
         };
+
+        ing: ing {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp N &kp G>;
+            label = "ING";
+        };
+
+        eu: eu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp E &kp U>;
+            label = "EU";
+        };
     };
 
     behaviors {
@@ -110,17 +124,44 @@
             bindings = <&kp ESC>;
             key-positions = <25 28>;
             layers = <0>;
+            slow-release;
+            timeout-ms = <75>;
+            require-prior-idle-ms = <125>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <25 26>;
             layers = <0>;
+            slow-release;
+            timeout-ms = <75>;
+            require-prior-idle-ms = <125>;
         };
 
         caps {
             bindings = <&caps_word>;
             key-positions = <28 31>;
+            layers = <0>;
+            slow-release;
+            timeout-ms = <75>;
+            require-prior-idle-ms = <125>;
+        };
+
+        ing {
+            bindings = <&ing>;
+            key-positions = <33 34>;
+            timeout-ms = <75>;
+            require-prior-idle-ms = <125>;
+            slow-release;
+            layers = <0>;
+        };
+
+        eu {
+            bindings = <&eu>;
+            key-positions = <32 33>;
+            timeout-ms = <75>;
+            require-prior-idle-ms = <125>;
+            slow-release;
             layers = <0>;
         };
 
@@ -148,7 +189,7 @@
 &trans  &kp LBRC  &kp LPAR  &kp RPAR  &kp RBRC  &kp UNDER    &kp PIPE   &kp QMARK  &kp EXCL           &kp EQUAL  &kp AMPS   &trans
 &trans  &kp LBKT  &kp LT    &kp GT    &kp RBKT  &kp CARET    &kp DLLR   &kp HASH   &kp AT             &kp PRCNT  &kp SEMI   &trans
                             &trans    &trans    &trans       &trans     &trans
-                                      &trans    &kp DEL      &trans
+                                      &trans    &trans       &trans
             >;
         };
 

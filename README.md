@@ -35,3 +35,8 @@ SynthX was designed with the following principles:
 3. **Common Bigrams**: Frequently typed letter pairs placed for comfortable rolls
 4. **Symbol Access**: Programming symbols easily accessible without excessive stretching
 5. **Split Ergonomics**: Designed for split keyboards with home row mods
+
+## Comparisons
+
+<img width="1176" height="666" alt="image" src="https://github.com/user-attachments/assets/5d2ceb49-721e-4c80-ab7b-ab731e92652a" />
+

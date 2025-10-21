@@ -67,7 +67,10 @@
         
         scroller {
             layers = <3>;
-            input-processors = <&zip_xy_to_scroll_mapper>;
+            input-processors = <
+                &zip_xy_scaler 1 8  // Adjust sensitivity (higher = less sensitive)
+                &zip_xy_to_scroll_mapper
+            >;    
         };
         // Volume control on layer 4
         volume_control {

@@ -13,7 +13,7 @@ S N T H V     G C A E I
 X P D M Q     Z Y O U ,
 ```
 ## Heat Map
-<img width="1288" height="600" alt="image" src="https://github.com/user-attachments/assets/8fb45a9d-1e26-4636-ad5b-2e33318c1bf4" />
+<img width="950" height="368" alt="image" src="https://github.com/user-attachments/assets/59f55682-0260-40d5-936f-b715b8b6e9d3" />
 
 ### Key Features
 

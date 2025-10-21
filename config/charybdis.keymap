@@ -1,4 +1,4 @@
-#include <behaviors.dtsi>
+r#include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -12,6 +12,19 @@
             label = "QU";
         };
 
+        ing: ing {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp N &kp G>;
+            label = "ING";
+        };
+
+        eu: eu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp E &kp U>;
+            label = "EU";
+        };
         // Macro to activate layer and hold Ctrl+Alt
 
         layer_ctrlalt: layer_with_ctrlalt {
@@ -33,20 +46,6 @@
                 <&mo 4>;
 
             label = "LAYER_CTRLALT";
-        };
-
-        ing: ing {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp I &kp N &kp G>;
-            label = "ING";
-        };
-
-        eu: eu {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp E &kp U>;
-            label = "EU";
         };
     };
 

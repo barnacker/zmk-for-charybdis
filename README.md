@@ -1,9 +1,9 @@
-# SynthX Keyboard Layout
+# SnthX Keyboard Layout
 A custom keyboard layout optimized for split ortholinear keyboards, designed for comfortable and efficient typing on boards like the Corne (Chocofi).
 
 ## Layout Overview
 
-SynthX is a custom alpha layout that prioritizes home row comfort and logical symbol placement for programming and general typing.
+SnthX is a custom alpha layout that prioritizes home row comfort and logical symbol placement for programming and general typing.
 
 ### Alpha Keys
 

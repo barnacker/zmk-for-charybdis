@@ -129,9 +129,8 @@
             bindings = <&kp ESC>;
             key-positions = <25 28>;
             layers = <0>;
-            slow-release;
-            timeout-ms = <75>;
-            require-prior-idle-ms = <125>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <250>;
         };
 
         tab {

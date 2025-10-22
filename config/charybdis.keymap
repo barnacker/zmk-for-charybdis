@@ -137,35 +137,31 @@
             bindings = <&kp TAB>;
             key-positions = <25 26>;
             layers = <0>;
-            slow-release;
-            timeout-ms = <75>;
-            require-prior-idle-ms = <125>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <250>;
         };
 
         caps {
             bindings = <&caps_word>;
             key-positions = <28 31>;
             layers = <0>;
-            slow-release;
-            timeout-ms = <75>;
-            require-prior-idle-ms = <125>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <250>;
         };
 
         ing {
             bindings = <&ing>;
             key-positions = <33 34>;
-            timeout-ms = <75>;
-            require-prior-idle-ms = <125>;
-            slow-release;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <250>;
             layers = <0>;
         };
 
         eu {
             bindings = <&eu>;
             key-positions = <32 33>;
-            timeout-ms = <75>;
-            require-prior-idle-ms = <125>;
-            slow-release;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <250>;
             layers = <0>;
         };
 

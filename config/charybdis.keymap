@@ -40,7 +40,7 @@
                 <&macro_press>,
                 <&mo 4>,
                 <&macro_press>,
-                <&kp LCTRL>,
+                <&kp LSHFT>,
                 <&macro_press>,
                 <&kp LALT>,
                 <&macro_pause_for_release>,
@@ -178,12 +178,12 @@
 
         baz {
             bindings = <
-&kp F1                   &kp F2      &kp F3      &kp F4       &kp F5               &kp F6          &kp F7     &kp F8        &kp F9       &kp F10     &kp F11     &kp F12
-&kp INS                  &kp F       &kp B       &kp K        &kp L                &kp J           &kp EQUAL  &kp W         &kp SQT      &kp SLASH   &kp DOT     &kp PG_UP
-&playvol 0 C_PLAY_PAUSE  &hm LGUI S  &hm LALT N  &hm LCTRL T  &hm LSHIFT H         &kp V           &kp G      &hm RSHFT C   &hm RCTRL A  &hm RALT E  &hm RGUI I  &mo 3
-&kp PRINTSCREEN          &kp X       &kp P       &kp D        &kp M                &lingerq Q 0    &kp Z      &kp Y         &kp O        &kp U       &kp COMMA   &kp PG_DN
-                                                 &mo 2        &tmo 5 R             &kp BSPC        &kp DEL    &tmo 1 SPACE
-                                                              &kp LS(INS)          &mt LS(DEL) LC(INS)   &kp RET
+&kp F1                   &kp F2      &kp F3      &kp F4       &kp F5        &kp F6                 &kp F7     &kp F8        &kp F9       &kp F10     &kp F11     &kp F12
+&kp INS                  &kp F       &kp B       &kp K        &kp L         &kp J                  &kp EQUAL  &kp W         &kp SQT      &kp SLASH   &kp DOT     &kp PG_UP
+&playvol 0 C_PLAY_PAUSE  &hm LGUI S  &hm LALT N  &hm LCTRL T  &hm LSHIFT H  &kp V                  &kp G      &hm RSHFT C   &hm RCTRL A  &hm RALT E  &hm RGUI I  &mo 3
+&kp PRINTSCREEN          &kp X       &kp P       &kp D        &kp M         &lingerq Q 0           &kp Z      &kp Y         &kp O        &kp U       &kp COMMA   &kp PG_DN
+                                                 &mo 2        &tmo 5 R      &kp BSPC               &kp DEL    &tmo 1 SPACE
+                                                              &kp LS(INS)   &mt LS(DEL) LC(INS)    &kp RET
             >;
         };
 
@@ -200,12 +200,12 @@
 
         num {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans          &trans     &trans  &trans  &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &kp STAR   &kp N7  &kp N8  &kp N9  &kp PLUS   &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &kp SLASH  &kp N4  &kp N5  &kp N6  &kp MINUS  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &kp DOT    &kp N1  &kp N2  &kp N3  &kp EQUAL  &trans
-                                &tran   &trans          &trans          &trans     &kp N0
-                                        &trans        c  &trans          &trans
+&trans  &trans  &trans  &trans  &trans    &trans    &trans     &trans  &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans    &trans    &kp STAR   &kp N7  &kp N8  &kp N9  &kp PLUS   &trans
+&trans  &trans  &trans  &trans  &trans    &trans    &kp SLASH  &kp N4  &kp N5  &kp N6  &kp MINUS  &trans
+&trans  &trans  &trans  &trans  &trans    &trans    &kp DOT    &kp N1  &kp N2  &kp N3  &kp EQUAL  &trans
+                        &tran   &trans    &trans    &trans     &kp N0
+                                &trans c  &trans    &trans
             >;
         };
 
@@ -233,14 +233,14 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        mouse {
+        nav {
             bindings = <
 &trans  &trans      &trans        &trans        &trans        &trans          &trans  &trans     &trans     &trans     &trans  &trans
 &trans  &trans      &kp HOME      &kp UP        &kp END       &trans          &trans  &trans     &trans     &trans     &trans  &trans
 &trans  &trans      &kp LEFT      &kp DOWN      &kp RIGHT     &trans          &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
 &trans  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &trans  &trans     &trans     &trans     &trans  &trans
-                                                &trans  &trans  &trans        &trans  &trans
-                                                &trans  &trans                &trans
+                                  &trans        &trans        &trans          &trans  &trans
+                                                &trans        &trans          &trans
             >;
         };
     };

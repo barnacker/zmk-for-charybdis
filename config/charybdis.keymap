@@ -187,12 +187,12 @@
 
         sym {
             bindings = <
-&trans  &trans    &trans    &trans    &trans    &trans       &trans     &trans     &trans             &trans     &trans     &trans
-&trans  &trans    &trans    &trans    &trans    &trans       &kp TILDE  &kp GRAVE  &kp DOUBLE_QUOTES  &kp BSLH   &kp COLON  &trans
-&trans  &kp LBRC  &kp LPAR  &kp RPAR  &kp RBRC  &kp UNDER    &kp PIPE   &kp QMARK  &kp EXCL           &kp EQUAL  &kp AMPS   &trans
-&trans  &kp LBKT  &kp LT    &kp GT    &kp RBKT  &kp CARET    &kp DLLR   &kp HASH   &kp AT             &kp PRCNT  &kp SEMI   &trans
-                            &trans    &trans    &trans       &trans     &trans
-                                      &trans    &trans       &trans
+&trans  &trans            &trans                &trans                 &trans             &trans            &trans     &trans     &trans             &trans     &trans     &trans
+&trans  &trans            &trans                &trans                 &trans             &trans            &kp TILDE  &kp GRAVE  &kp DOUBLE_QUOTES  &kp BSLH   &kp COLON  &trans
+&trans  &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE    &kp UNDERSCORE    &kp PIPE   &kp QMARK  &kp EXCL           &kp EQUAL  &kp AMPS   &trans
+&trans  &kp LEFT_BRACKET  &kp LESS_THAN         &kp GREATER_THAN       &kp RIGHT_BRACKET  &kp CARET         &kp DLLR   &kp HASH   &kp AT             &kp PRCNT  &kp SEMI   &trans
+                                                &trans                 &trans             &trans            &trans     &trans
+                                                                       &trans             &trans            &trans
             >;
         };
 

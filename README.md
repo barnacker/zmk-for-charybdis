@@ -13,7 +13,7 @@ S N T H V     G C A E I
 X P D M Q     Z Y O U ,
 ```
 ## Heat Map
-<img width="950" height="368" alt="image" src="https://github.com/user-attachments/assets/59f55682-0260-40d5-936f-b715b8b6e9d3" />
+<img width="1195" alt="image" src="https://github.com/user-attachments/assets/59f55682-0260-40d5-936f-b715b8b6e9d3" />
 
 ### Key Features
 
@@ -24,8 +24,7 @@ X P D M Q     Z Y O U ,
 
 ## Character Mappings
 
-<img width="900" height="2040" alt="my_keymap" src="https://github.com/user-attachments/assets/aa732c24-e7d2-4908-9958-a7aa55acc23e" />
-
+<img width="1195" alt="my_keymap" src="https://github.com/user-attachments/assets/8dd2ed7a-c79e-4512-8fbe-fa85ec58ce04" />
 
 ## Design Philosophy
 
@@ -38,5 +37,5 @@ SynthX was designed with the following principles:
 5. **Split Ergonomics**: Designed for split keyboards with home row mods
 
 ## Comparisons
-<img width="1195" height="657" alt="image" src="https://github.com/user-attachments/assets/d230c359-98ac-48d8-a3df-aa4e9a3f63e2" />
+<img width="1195" alt="image" src="https://github.com/user-attachments/assets/d230c359-98ac-48d8-a3df-aa4e9a3f63e2" />
 

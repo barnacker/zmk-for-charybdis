@@ -24,7 +24,8 @@ X P D M Q     Z Y O U ,
 
 ## Character Mappings
 
-<img alt="my_keymap" src="https://github.com/user-attachments/assets/8ca3368b-3e5c-4b4a-82a5-bee394172ec7" />
+<img width="900" height="2040" alt="my_keymap" src="https://github.com/user-attachments/assets/aa732c24-e7d2-4908-9958-a7aa55acc23e" />
+
 
 ## Design Philosophy
 

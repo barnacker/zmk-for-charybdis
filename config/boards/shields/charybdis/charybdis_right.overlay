@@ -81,11 +81,10 @@
             >;
         };
 
-        // ← SNIPE MODE BLOCK
         snipe {
             layers = <6>;
             input-processors = 
-                &zip_xy_scaler 1 4    // DIVIDES MOVEMENT BY 4 — ADJUST RATIO AS NEEDED
+                &zip_xy_scaler 1 4
             >;
         };
     };
